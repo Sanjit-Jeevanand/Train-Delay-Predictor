@@ -1,0 +1,94 @@
+{
+  "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+  "id": "tram",
+  "name": "Tram",
+  "modeName": "tram",
+  "disruptions": [],
+  "created": "2025-07-03T11:09:43.907Z",
+  "modified": "2025-07-03T11:09:43.907Z",
+  "lineStatuses": [],
+  "routeSections": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "Wimbledon Tram Stop - Beckenham Junction Tram Stop",
+      "direction": "inbound",
+      "originationName": "Wimbledon Tram Stop",
+      "destinationName": "Beckenham Junction Tram Stop",
+      "originator": "940GZZCRWMB",
+      "destination": "940GZZCRBEK",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "Beckenham Junction Tram Stop - Wimbledon Tram Stop",
+      "direction": "outbound",
+      "originationName": "Beckenham Junction Tram Stop",
+      "destinationName": "Wimbledon Tram Stop",
+      "originator": "940GZZCRBEK",
+      "destination": "940GZZCRWMB",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "Wimbledon Tram Stop - Elmers End Tram Stop",
+      "direction": "inbound",
+      "originationName": "Wimbledon Tram Stop",
+      "destinationName": "Elmers End Tram Stop",
+      "originator": "940GZZCRWMB",
+      "destination": "940GZZCRELM",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "Elmers End Tram Stop - Wimbledon Tram Stop",
+      "direction": "outbound",
+      "originationName": "Elmers End Tram Stop",
+      "destinationName": "Wimbledon Tram Stop",
+      "originator": "940GZZCRELM",
+      "destination": "940GZZCRWMB",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "Church Street Tram Stop - New Addington Tram Stop",
+      "direction": "inbound",
+      "originationName": "Church Street Tram Stop",
+      "destinationName": "New Addington Tram Stop",
+      "originator": "940GZZCRCHR",
+      "destination": "940GZZCRNWA",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.MatchedRoute, Tfl.Api.Presentation.Entities",
+      "name": "New Addington Tram Stop - Church Street Tram Stop",
+      "direction": "outbound",
+      "originationName": "New Addington Tram Stop",
+      "destinationName": "Church Street Tram Stop",
+      "originator": "940GZZCRNWA",
+      "destination": "940GZZCRCHR",
+      "serviceType": "Regular",
+      "validTo": "2025-12-23T00:00:00Z",
+      "validFrom": "2025-06-28T00:00:00Z"
+    }
+  ],
+  "serviceTypes": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+      "name": "Regular",
+      "uri": "/Line/Route?ids=Tram&serviceTypes=Regular"
+    }
+  ],
+  "crowding": {
+    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+  }
+}
