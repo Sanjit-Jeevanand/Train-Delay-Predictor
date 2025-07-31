@@ -1,0 +1,30 @@
+# On macOS/Linux
+nano .gitignore
+# Paste the content, then Ctrl+X, Y, Enter to save.
+
+# Or using echo (less interactive but works)
+echo "# Python specific ignores" > .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "*.pyo" >> .gitignore
+echo "*.pyd" >> .gitignore
+echo ".Python" >> .gitignore
+echo "venv/" >> .gitignore
+echo ".venv/" >> .gitignore
+echo "*.egg-info/" >> .gitignore
+echo ".pytest_cache/" >> .gitignore
+echo ".mypy_cache/" >> .gitignore
+echo "" >> .gitignore
+echo "# OS specific ignores" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo ".env" >> .gitignore
+echo "" >> .gitignore
+echo "# Data directories - these contain generated data and should generally be ignored" >> .gitignore
+echo "data/processed/" >> .gitignore
+echo "data/final/" >> .gitignore
+echo "" >> .gitignore
+echo "# Models directory - trained models are typically ignored as they can be regenerated" >> .gitignore
+echo "models/" >> .gitignore
+echo "" >> .gitignore
+echo "# Streamlit specific ignores" >> .gitignore
+echo ".streamlit/" >> .gitignore
