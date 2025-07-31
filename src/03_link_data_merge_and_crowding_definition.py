@@ -89,8 +89,8 @@ if __name__ == "__main__":
     # --- Calculate Line-Specific Percentiles for 'Load_Per_Train' ---
     print("\n--- Calculating Line-Specific Percentile Thresholds ---")
 
-    line_percentiles = df_final_crowding_feature.groupby('Line')['Load_Per_Train'].quantile([0.60, 0.80, 0.95]).unstack()
-    line_percentiles.columns = ['p60', 'p80', 'p95'] 
+    line_percentiles = df_final_crowding_feature.groupby('Line')['Load_Per_Train'].quantile([0.30, 0.60, 0.85]).unstack()
+    line_percentiles.columns = ['p30', 'p60', 'p85'] 
 
     print("\nLine-Specific Percentile Thresholds for Load_Per_Train:")
     print(line_percentiles)
@@ -106,19 +106,19 @@ if __name__ == "__main__":
             return 'Low'
 
         if line in line_percentiles.index:
+            p30 = line_percentiles.loc[line, 'p30']
             p60 = line_percentiles.loc[line, 'p60']
-            p80 = line_percentiles.loc[line, 'p80']
-            p95 = line_percentiles.loc[line, 'p95']
+            p85 = line_percentiles.loc[line, 'p85']
         else:
             return None 
 
         if pd.isna(load_per_train_value):
             return None 
-        elif load_per_train_value <= p60:
+        elif load_per_train_value <= p30:
             return 'Low'
-        elif load_per_train_value <= p80:
+        elif load_per_train_value <= p60:
             return 'Medium'
-        elif load_per_train_value <= p95:
+        elif load_per_train_value <= p85:
             return 'High'
         else:
             return 'Very High'

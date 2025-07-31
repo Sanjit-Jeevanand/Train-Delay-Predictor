@@ -77,25 +77,25 @@ The project was structured into five distinct phases:
 * **Phase 1: Data Exploration and Understanding:** Initial data review, transformation from wide to long format, and definition of line-specific crowding levels based on `Load_Per_Train` percentiles.
 * **Phase 2: Data Cleaning and Preprocessing:** Aggregation of core link data, handling of missing values, dropping of redundant identifiers, and categorical encoding (One-Hot and Ordinal) with encoder persistence.
 * **Phase 3: Feature Engineering:** Focus on `Order`, `From NLC`, `To NLC`, `quarter_of_day_index`, `Line`, `Dir`, and `DayOfWeek` as the core predictive features available at inference time. (More advanced features like lags and rolling statistics were considered for future work due to real-time availability constraints).
-* **Phase 4: Model Building and Evaluation:** Selection and training of a `RandomForestClassifier`. Hyperparameter tuning using Optuna and addressing class imbalance with `class_weight='balanced'` led to significant performance improvements (Accuracy: 0.92, Macro F1: 0.85).
+* **Phase 4: Model Building and Evaluation:** Selection and training of a `RandomForestClassifier`. Hyperparameter tuning using Optuna and addressing class imbalance with `class_weight='balanced'` led to significant performance improvements (Accuracy: 0.90, Macro F1: 0.88).
 * **Phase 5: Prediction Tool and Deployment:** Development of an interactive Streamlit application for real-time crowding predictions, demonstrating practical model deployment.
 
 ## Model Performance (Tuned RandomForest)
 
 | Metric            | Score    |
 | :---------------- | :------- |
-| Accuracy          | 0.9202   |
+| Accuracy          | 0.9039   |
 | Macro Avg F1-Score | 0.85     |
-| Weighted Avg F1-Score | 0.92     |
+| Weighted Avg F1-Score | 0.90     |
 
 **Classification Report:**
 
 | Class     | Precision | Recall | F1-Score | Support |
 | :-------- | :-------- | :----- | :------- | :------ |
-| Low       | 0.98      | 0.96   | 0.97     | 111323  |
-| Medium    | 0.77      | 0.83   | 0.80     | 23098   |
-| High      | 0.80      | 0.83   | 0.81     | 17322   |
-| Very High | 0.78      | 0.88   | 0.83     | 5774    |
+| Low       | 0.97      | 0.95   | 0.96     | 76677   |
+| Medium    | 0.84      | 0.86   | 0.85     | 34646   |
+| High      | 0.84      | 0.84   | 0.84     | 28872   |
+| Very High | 0.86      | 0.88   | 0.88     | 17322   |
 
 ## Future Enhancements
 
