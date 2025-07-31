@@ -19,39 +19,6 @@ The project utilizes the **Transport for London (TfL) NUMBAT dataset**, which pr
 
 *(Note: Specific raw data files are not included in the repository if they are large or proprietary, but the processing scripts expect them in the `data/raw/crowding/` directory.)*
 
-## Project Structure
-
-
-
-TubeCrowdPredictor/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── data/
-│   ├── raw/
-│   │   └── crowding/       # Original raw data files (e.g., NBT23FRI_outputs.xlsx - Link_Loads.csv)
-│   ├── processed/      # Intermediate processed files
-│   └── final/          # Final processed data, encoders, and mappings
-│       ├── extracted_nlc_station_mapping.csv
-│       ├── final_merged_link_data_cleaned.csv
-│       ├── data_encoded.csv
-│       ├── onehot_encoder.pkl
-│       └── ordinal_encoder.pkl
-├── models/             # Trained machine learning models
-│   └── random_forest_model.pkl
-├── src/                # Python scripts for data processing and model training
-│   ├── 01_raw_data_ingestion.py
-│   ├── 02_data_transformation_and_quarter_index.py
-│   ├── 03_link_data_merge_and_crowding_definition.py
-│   ├── 04_station_nlc_mapping_extraction.py
-│   ├── 05_final_data_preparation_and_encoding.py
-│   └── 06_model_training_and_tuning.py
-├── app/
-│   └──   app.py        # Streamlit web application
-└── setup.sh            # (Optional) Script for environment setup
-
-## Setup and Installation
-
 1.  **Clone the Repository:**
     ```bash
     git clone [https://github.com/Sanjit-Jeevanand/TubeCrowdPredictor.git](https://github.com/Sanjit-Jeevanand/TubeCrowdPredictor.git)
