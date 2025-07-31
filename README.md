@@ -22,6 +22,7 @@ The project utilizes the **Transport for London (TfL) NUMBAT dataset**, which pr
 ## Project Structure
 
 
+
 TubeCrowdPredictor/
 ├── .gitignore
 ├── README.md
@@ -48,7 +49,6 @@ TubeCrowdPredictor/
 ├── app/
 │   └──   app.py        # Streamlit web application
 └── setup.sh            # (Optional) Script for environment setup
-
 
 ## Setup and Installation
 
