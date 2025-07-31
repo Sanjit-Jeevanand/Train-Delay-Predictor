@@ -54,7 +54,7 @@ TubeCrowdPredictor/
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/TubeCrowdPredictor.git](https://github.com/your-username/TubeCrowdPredictor.git)
+    git clone [https://github.com/Sanjit-Jeevanand/TubeCrowdPredictor.git](https://github.com/Sanjit-Jeevanand/TubeCrowdPredictor.git)
     cd TubeCrowdPredictor
     ```
 
